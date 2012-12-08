@@ -58,8 +58,7 @@ public class AnimateObject {
 	 * Animates a frame on a certain position with a certain rotation, determining the
 	 * frame based on the elapsed time as well as the accumulated time
 	 * @param elapsedTime
-	 * @param x
-	 * @param y
+	 * @param position
 	 * @param rotation
 	 * @param g
 	 */
@@ -74,8 +73,7 @@ public class AnimateObject {
 	
 	/**
 	 * Displays a frame at the choosen position with the choosen rotation
-	 * @param x
-	 * @param y
+	 * @param position
 	 * @param rotation
 	 * @param frame
 	 * @param g
