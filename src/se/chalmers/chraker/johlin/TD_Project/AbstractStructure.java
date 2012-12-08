@@ -3,15 +3,27 @@ package se.chalmers.chraker.johlin.TD_Project;
 import java.awt.geom.Area;
 
 public class AbstractStructure extends AbstractEntity {
+	
 	private ResourcePack cost;
-	private int techLevel;
-	protected AbstractStructure(CPosition position, Area bounds, AnimateObject ao, double rotation) {
+	private int techLevel = 1;
+	
+	protected AbstractStructure(CPosition position, Area bounds, 
+			AnimateObject ao, double rotation, ResourcePack cost) {
 		super(position, bounds, ao, rotation);
-		// TODO Auto-generated constructor stub
+		this.cost = cost;
 	}
+	
+	public void Upgrade(){
+		techLevel++;
+	}
+	
 	public ResourcePack getUpgradeCost() {
-		return cost;
+		return new ResourcePack(
+				cost.getResearch()*(techLevel+1),
+				cost.getMass()*(techLevel+1),
+				cost.getPower()*(techLevel+1));
 	}
+	
 	public int getTechLevel() {
 		return techLevel;
 	}
