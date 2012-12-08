@@ -5,9 +5,17 @@ import java.awt.geom.Area;
 public class AbstractMovingEntity extends AbstractEntity {
 	private double speed;
 	private Area[] targetAreas;
-	private CPosition 
-	public AbstractMovingEntity(CPosition position, Area bounds) {
-		super(position, bounds);
+	private CPosition target;
+	private boolean atTarget;
+	protected AbstractMovingEntity(CPosition position, Area bounds, 
+			AnimateObject ao, double rotation, double speed, Area[] targetAreas,
+			CPosition target) {
+		super(position, bounds, ao, rotation);
+	}
+	protected void moveWithTempTargets(CPosition position, Area[] tempTargets){
 		
 	}
-}
+	public boolean atTarget(){
+		return atTarget;
+	}
+} 
