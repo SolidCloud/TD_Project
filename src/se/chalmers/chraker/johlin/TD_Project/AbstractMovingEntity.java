@@ -18,4 +18,10 @@ public class AbstractMovingEntity extends AbstractEntity {
 	public boolean atTarget(){
 		return atTarget;
 	}
+	
+	@Override
+	public void update( int elapsedTime){
+		
+	}
+	
 } 
