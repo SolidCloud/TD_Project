@@ -1,4 +1,4 @@
-package se.chalmers.chraker.johlin.TD_Project;
+package se.chalmers.chraker.jolinds.tdproject;
 
 import java.awt.geom.Area;
 
