@@ -15,6 +15,7 @@ public class Unit extends AbstractMovingEntity implements Comparable<Unit> {
 		this.massValue = massValue;
 		this.protection = protection;
 	}
+	
 	public DamagePack getProtection() {
 		return protection;
 	}

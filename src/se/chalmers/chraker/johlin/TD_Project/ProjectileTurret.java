@@ -3,6 +3,7 @@ package se.chalmers.chraker.johlin.TD_Project;
 import java.awt.Graphics;
 import java.awt.geom.Area;
 import java.util.ArrayList;
+import java.util.List;
 
 public class ProjectileTurret extends Turret {
 	private Projectile toBeFired;
@@ -10,25 +11,27 @@ public class ProjectileTurret extends Turret {
 	private AnimateObject ao;
 
 	public ProjectileTurret(CPosition position, Area bounds, AnimateObject ao,
-			double rotation, ResourcePack economy) {
-		super(position, bounds, ao, economy);
-		// TODO Auto-generated constructor stub
+			ResourcePack cost, ResourcePack economy, int cooldown, 
+				Area range, Projectile projectile) {
+		super(position, bounds, ao, cost, economy, cooldown, range);
+		this.toBeFired = projectile;
 	}
 	private Unit getTarget(Unit[] units) {
+		List<Unit> targets = new ArrayList<Unit>();
 		if(cooldownRemaining <= 0){	
-			ArrayList<Unit> targetArray = new ArrayList ();
-			for(int unitIndex = 0; unitIndex < units.length; unitIndex++){
-				Area checkIntersect = (Area)range.clone();
-				checkIntersect.intersect(units[unitIndex]);
+			for (Unit unit : units){
+				Area checkIntersect = getRange();
+				checkIntersect.intersect(unit.getBounds());
 				if (checkIntersect.isEmpty()){
-					targetArray.add(units[unitIndex]);
+					targets.add(unit);
 				}
 			}
-			switch (targetMode){
+			switch (getTargetMode()){
 			case CLOSE:
 				Area temp;
-				for(int unitIndex = 0; unitIndex < targetArray.size(); unitIndex++ ){
-					if()
+				for(Unit target : targets){
+					//if()
+					// TODO something is not finished here
 				}
 				break;
 			case FAR:
@@ -42,6 +45,7 @@ public class ProjectileTurret extends Turret {
 			case WEAK:
 				break;
 			}
+
 		}
 		return null;
 	}
