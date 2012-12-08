@@ -7,8 +7,8 @@ public class EconomyStructure extends AbstractStructure {
 	private boolean enabled;
 
 	public EconomyStructure(CPosition position, Area bounds,
-			AnimateObject ao, double rotation, ResourcePack economy) {
-		super(position, bounds, ao, rotation);
+			AnimateObject ao, ResourcePack economy) {
+		super(position, bounds, ao);
 		this.economy = economy;
 		this.enabled = true;
 	}

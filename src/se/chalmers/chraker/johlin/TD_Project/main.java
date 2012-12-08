@@ -1,6 +1,6 @@
 package se.chalmers.chraker.johlin.TD_Project;
 
-public class main {
+public class Main {
 
 	/**
 	 * @param args

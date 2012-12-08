@@ -6,12 +6,12 @@ public class FieldTurret extends Turret {
 	private Damage toBeFired;
 
 	public FieldTurret(CPosition position, Area bounds, AnimateObject ao,
-			double rotation, ResourcePack economy) {
-		super(position, bounds, ao, rotation, economy);
+			ResourcePack economy) {
+		super(position, bounds, ao, economy);
 		// TODO Auto-generated constructor stub
 	}
 
 	public Damage getDamage() {
-		
+		return null;
 	}
 }

@@ -16,9 +16,8 @@ public class Turret extends EconomyStructure {
 	private int cooldownRemaining;
 	
 	public Turret(CPosition position, Area bounds, AnimateObject ao,
-			double rotation, ResourcePack economy, int cooldown,
-			Area range) {
-		super(position, bounds, ao, rotation, economy);
+			ResourcePack economy, int cooldown, Area range) {
+		super(position, bounds, ao, economy);
 		
 		this.cooldown = cooldown;
 		this.cooldownRemaining = this.cooldown;
@@ -62,9 +61,13 @@ public class Turret extends EconomyStructure {
 			case WEAK:
 				break;
 			}
+
 		}
-		return null;
 	}
+	public boolean checkFire(int elapsedTime, Area[] units) {
+		return false;
+	}
+
 	private void fire() {
 		
 	}

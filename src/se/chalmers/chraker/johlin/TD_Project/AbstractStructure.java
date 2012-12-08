@@ -8,8 +8,8 @@ public class AbstractStructure extends AbstractEntity {
 	private int techLevel = 1;
 	
 	protected AbstractStructure(CPosition position, Area bounds, 
-			AnimateObject ao, double rotation, ResourcePack cost) {
-		super(position, bounds, ao, rotation);
+			AnimateObject ao, ResourcePack cost) {
+		super(position, bounds, ao);
 		this.cost = cost;
 	}
 	

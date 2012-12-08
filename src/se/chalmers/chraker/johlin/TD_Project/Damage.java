@@ -6,7 +6,7 @@ public class Damage extends AbstractEntity{
 
 	protected Damage(CPosition position, Area bounds, AnimateObject ao,
 			double rotation) {
-		super(position, bounds, ao, rotation);
+		super(position, bounds, ao);
 		// TODO Auto-generated constructor stub
 	}
  

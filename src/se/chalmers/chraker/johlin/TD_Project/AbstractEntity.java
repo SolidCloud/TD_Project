@@ -9,8 +9,8 @@ public class AbstractEntity implements Updateable, Drawable{
 	private Area bounds;
 	private AnimateObject ao;
 	private double rotation;
-	protected AbstractEntity( CPosition position, Area bounds, AnimateObject ao, 
-			double rotation){
+	protected AbstractEntity( CPosition position, Area bounds,
+			AnimateObject ao){
 	}
 	protected int getTime(){
 		return time;

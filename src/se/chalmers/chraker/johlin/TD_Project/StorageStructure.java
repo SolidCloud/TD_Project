@@ -7,7 +7,7 @@ public class StorageStructure extends AbstractStructure {
 
 	public StorageStructure(CPosition position, Area bounds,
 			AnimateObject ao, double rotation, ResourcePack maxStorage) {
-		super(position, bounds, ao, rotation);
+		super(position, bounds, ao);
 		this.maxStorage = maxStorage;
 	}
 	public ResourcePack getMaxStorage() {

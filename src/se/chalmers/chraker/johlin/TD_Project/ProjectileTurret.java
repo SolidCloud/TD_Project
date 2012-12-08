@@ -7,14 +7,13 @@ import java.util.ArrayList;
 public class ProjectileTurret extends Turret {
 	private Projectile toBeFired;
 	private int turretRotation;
-	private AnimatedObject ao;
+	private AnimateObject ao;
 
 	public ProjectileTurret(CPosition position, Area bounds, AnimateObject ao,
 			double rotation, ResourcePack economy) {
-		super(position, bounds, ao, rotation, economy);
+		super(position, bounds, ao, economy);
 		// TODO Auto-generated constructor stub
 	}
-
 	private Unit getTarget(Unit[] units) {
 		if(cooldownRemaining <= 0){	
 			ArrayList<Unit> targetArray = new ArrayList ();
@@ -48,6 +47,10 @@ public class ProjectileTurret extends Turret {
 	}
 	private void fire() {
 		
+	}
+		
+	public Projectile getProjectile() {
+		return null;
 	}
 	
 	@Override
