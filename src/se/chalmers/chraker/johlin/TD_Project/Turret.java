@@ -36,12 +36,12 @@ public class Turret extends EconomyStructure {
 	
 	private Area getTarget(Unit[] units) {
 		if(cooldownRemaining <= 0){	
-			ArrayList<Area> targetArray = new ArrayList ();
-			for(int unitIndex = 0; unitIndex < unitAreas.length; unitIndex++){
+			ArrayList<Unit> targetArray = new ArrayList ();
+			for(int unitIndex = 0; unitIndex < units.length; unitIndex++){
 				Area checkIntersect = (Area)range.clone();
-				checkIntersect.intersect(unitAreas[unitIndex]);
+				checkIntersect.intersect(units[unitIndex]);
 				if (checkIntersect.isEmpty()){
-					targetArray.add(unitAreas[unitIndex]);
+					targetArray.add(units[unitIndex]);
 				}
 			}
 			switch (targetMode){
