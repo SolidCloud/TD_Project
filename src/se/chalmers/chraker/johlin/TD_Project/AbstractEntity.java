@@ -8,7 +8,7 @@ public class AbstractEntity {
 	private Area bounds;
 	private AnimateObject ao;
 	private double rotation;
-	protected AbstractEntity( CPosition position, Area bounds){
+	protected AbstractEntity( CPosition position, Area bounds, AnimateObject ao, double rotation){
 	}
 	protected int getTime(){
 		return time;
