@@ -16,7 +16,7 @@ public class EconomyStructure extends AbstractStructure {
 	 * @param economy 
 	 * TODO what is economy???
 	 */
-	public EconomyStructure(CPosition position, Area bounds,
+	public EconomyStructure(Position position, Area bounds,
 			AnimateObject ao, ResourcePack cost, ResourcePack economy) {
 		super(position, bounds, ao, cost);
 		this.economy = economy;
@@ -36,6 +36,6 @@ public class EconomyStructure extends AbstractStructure {
 		return enabled;
 	}
 	public void setEfficiency(int efficiency) {
-		
+
 	}
 }

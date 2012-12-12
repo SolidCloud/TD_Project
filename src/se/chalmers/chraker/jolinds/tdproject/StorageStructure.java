@@ -5,9 +5,9 @@ import java.awt.geom.Area;
 public class StorageStructure extends AbstractStructure {
 	private ResourcePack maxStorage;
 
-	public StorageStructure(CPosition position, Area bounds,
+	public StorageStructure(Position position, Area bounds,
 			AnimateObject ao, double rotation, ResourcePack cost, 
-				ResourcePack maxStorage) {
+			ResourcePack maxStorage) {
 		super(position, bounds, ao, cost);
 		this.maxStorage = maxStorage;
 	}

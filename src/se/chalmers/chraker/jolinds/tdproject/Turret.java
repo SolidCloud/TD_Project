@@ -11,7 +11,7 @@ public class Turret extends EconomyStructure {
 	private Area range;
 	private int cooldown;
 	protected int cooldownRemaining;
-	
+
 	/**
 	 * Base constructor
 	 *
@@ -22,10 +22,10 @@ public class Turret extends EconomyStructure {
 	 * @param economy 
 	 * TODO what is economy???
 	 */
-	public Turret(CPosition position, Area bounds, AnimateObject ao,
+	public Turret(Position position, Area bounds, AnimateObject ao,
 			ResourcePack cost, ResourcePack economy, int cooldown, Area range) {
 		super(position, bounds, ao, cost, economy);
-		
+
 		this.cooldown = cooldown;
 		this.cooldownRemaining = cooldown;
 		this.range = range;
@@ -33,8 +33,8 @@ public class Turret extends EconomyStructure {
 	public Area getRange() {
 		return (Area) range.clone();
 	}
-	
-	
+
+
 	protected List<Unit> getTargets(List<Unit> units) {
 		List<Unit> targets = new ArrayList<Unit>();
 		for (Unit unit : units){

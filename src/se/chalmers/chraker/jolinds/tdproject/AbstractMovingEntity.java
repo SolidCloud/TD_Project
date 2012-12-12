@@ -12,7 +12,7 @@ import java.awt.geom.Area;
 public class AbstractMovingEntity extends AbstractEntity {
 	private double speed;
 	private Area[] targetAreas;
-	private CPosition target;
+	private Position target;
 	private boolean atTarget;
 
 	/**
@@ -24,8 +24,8 @@ public class AbstractMovingEntity extends AbstractEntity {
 	 * @param speed the speed of the entity
 	 * @param target the position where the entity will be moving towards
 	 */
-	protected AbstractMovingEntity(CPosition position, Area bounds, 
-			AnimateObject ao, double speed, CPosition target) {
+	protected AbstractMovingEntity(Position position, Area bounds, 
+			AnimateObject ao, double speed, Position target) {
 		super(position, bounds, ao);
 		this.speed = speed;
 		this.target = target;
@@ -35,8 +35,8 @@ public class AbstractMovingEntity extends AbstractEntity {
 	 * @param position end position
 	 * @param tempTargets collision areas to detect
 	 */
-	protected void moveWithTempTargets(CPosition position, Area[] tempTargets){
-		
+	protected void moveWithTempTargets(Position position, Area[] tempTargets){
+
 	}
 	/**
 	 * Checks if the entity has arrived at the end position
@@ -45,11 +45,11 @@ public class AbstractMovingEntity extends AbstractEntity {
 	public boolean atTarget(){
 		return atTarget;
 	}
-	
+
 	// TODO Javadoc missing!!!
 	@Override
 	public void update(int elapsedTime){
-		
+
 	}
-	
+
 } 

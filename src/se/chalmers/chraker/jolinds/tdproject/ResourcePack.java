@@ -9,7 +9,7 @@ public class ResourcePack {
 	private int research;
 	private int mass;
 	private int power;
-	
+
 	/**
 	 * Constructor that accepts a value for each type of resource.
 	 * 
@@ -30,7 +30,7 @@ public class ResourcePack {
 	public int getResearch() {
 		return research;
 	}
-	
+
 	/**
 	 * Returns the amount of mass resource that is in this pack.
 	 * @return value representing the amount of mass resource
@@ -38,7 +38,7 @@ public class ResourcePack {
 	public int getMass() {
 		return mass;
 	}
-	
+
 	/**
 	 * Returns the amount of power resource that is in this pack.
 	 * @return value representing the amount of power resource
@@ -46,5 +46,5 @@ public class ResourcePack {
 	public int getPower() {
 		return power;
 	}
-	
+
 }

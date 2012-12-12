@@ -3,10 +3,10 @@ package se.chalmers.chraker.jolinds.tdproject;
 import java.awt.geom.Area;
 
 public class Damage extends AbstractEntity {
-	
+
 	private DamagePack damage;
 
-	public Damage(CPosition position, Area bounds, AnimateObject ao, 
+	public Damage(Position position, Area bounds, AnimateObject ao, 
 			DamagePack damage) {
 		super(position, bounds, ao);
 		this.damage = damage;
@@ -16,4 +16,3 @@ public class Damage extends AbstractEntity {
 		return damage;
 	}
 }
- 

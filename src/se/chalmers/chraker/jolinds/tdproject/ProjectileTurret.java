@@ -11,20 +11,20 @@ public class ProjectileTurret extends Turret {
 		FIRST, LAST, WEAK, STRONG, CLOSE, FAR, MAXIMUM_DAMAGE;
 		public TargetMode toggle() {
 			switch(this) {
-				case CLOSE:
-					return FAR;
-				case FAR:
-					return CLOSE;
-				case FIRST:
-					return LAST;
-				case LAST:
-					return FIRST;
-				case STRONG:
-					return WEAK;
-				case WEAK:
-					return STRONG;
-				default:
-					return FIRST;
+			case CLOSE:
+				return FAR;
+			case FAR:
+				return CLOSE;
+			case FIRST:
+				return LAST;
+			case LAST:
+				return FIRST;
+			case STRONG:
+				return WEAK;
+			case WEAK:
+				return STRONG;
+			default:
+				return FIRST;
 			}
 		}
 	}
@@ -39,32 +39,32 @@ public class ProjectileTurret extends Turret {
 	public TargetMode getTargetMode() {
 		return this.targetMode;
 	}
-	
-	public ProjectileTurret(CPosition position, Area bounds, AnimateObject ao,
+
+	public ProjectileTurret(Position position, Area bounds, AnimateObject ao,
 			ResourcePack cost, ResourcePack economy, int cooldown, 
-				Area range, Projectile projectile) {
+			Area range, Projectile projectile) {
 		super(position, bounds, ao, cost, economy, cooldown, range);
 		this.toBeFired = projectile;
 	}
 	public Unit getTarget(List<Unit> units) {
 		List<Unit> targets = super.getTargets(units);
 		Unit target = targets.get(0);
-		if(targets.size() > 1 ){	
+		if(targets.size() > 1 ){
 			switch (getTargetMode()){
 			case CLOSE:
-				for(int t = 1; t < targets.size(); t++){
-					if(targets.get(t).getPosition().closerThanToTarget(
-							targets.get(t-1).getPosition(), 
-							this.getPosition())){
+				for(int t = 0; t < targets.size(); t++){
+					if (!target.getPosition().closest(target.getPosition(), 
+							targets.get(t).getPosition()).equals(
+									target.getPosition())) {
 						target = targets.get(t);
 					}
 				}
 				break;
 			case FAR:
-				for(int t = 1; t < targets.size(); t++){
-					if(!targets.get(t).getPosition().closerThanToTarget(
-							targets.get(t-1).getPosition(), 
-							this.getPosition())){
+				for(int t = 0; t < targets.size(); t++){
+					if (target.getPosition().closest(target.getPosition(), 
+							targets.get(t).getPosition()).equals(
+									target.getPosition())) {
 						target = targets.get(t);
 					}
 				}
@@ -74,7 +74,7 @@ public class ProjectileTurret extends Turret {
 			case STRONG:
 				for(int t = 1; t < targets.size(); t++){
 					if(targets.get(t).getStructure() >
-						targets.get(t-1).getStructure()){
+					targets.get(t-1).getStructure()){
 						target = targets.get(t);
 					}
 				}
@@ -82,7 +82,7 @@ public class ProjectileTurret extends Turret {
 			case WEAK:
 				for(int t = 1; t < targets.size(); t++){
 					if(targets.get(t).getStructure() <
-						targets.get(t-1).getStructure()){
+							targets.get(t-1).getStructure()){
 						target = targets.get(t);
 					}
 				}
@@ -95,9 +95,9 @@ public class ProjectileTurret extends Turret {
 					int dmg1 = GameUtils.modSub(dmg.getBallistic(),
 							prot1.getBallistic())+ 
 							GameUtils.modSub(dmg.getEnergy(),
-							prot1.getEnergy())+ 
-							GameUtils.modSub(dmg.getKinetic(),
-							prot1.getKinetic());
+									prot1.getEnergy())+ 
+									GameUtils.modSub(dmg.getKinetic(),
+											prot1.getKinetic());
 					if(dmg1 > targets.get(t).getStructure()){
 						dmg1 -= dmg1 -targets.get(t).getStructure();
 					}
@@ -114,13 +114,13 @@ public class ProjectileTurret extends Turret {
 		}
 		return target;
 	}
-	
+
 	public Projectile getProjectile() {
 		return toBeFired;
 	}
-	
+
 	@Override
 	public void draw(Graphics g) {
-		
+
 	}
 }

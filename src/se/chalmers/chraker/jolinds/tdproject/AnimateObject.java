@@ -8,7 +8,6 @@ import java.awt.image.AffineTransformOp;
 import java.awt.image.BufferedImage;
 
 import javax.swing.ImageIcon;
-import javax.swing.text.Position;
 
 /**
  * Support class for animating objects
@@ -25,7 +24,7 @@ public class AnimateObject {
 	/** The dimension of each frame, will be used together with frameCount to get the different frames from 
 	 * the ImageIcon object */
 	private Dimension frameDimension;
-	
+
 	/**
 	 * Construct an AnimateObject
 	 * @param frames[]
@@ -53,7 +52,7 @@ public class AnimateObject {
 		this.fps = fps;
 		this.frameDimension = frameDimension;
 	}
-	
+
 	/**
 	 * Animates a frame on a certain position with a certain rotation, determining the
 	 * frame based on the elapsed time as well as the accumulated time
@@ -62,7 +61,7 @@ public class AnimateObject {
 	 * @param rotation
 	 * @param g
 	 */
-	public void animate(int elapsedTime, CPosition position, double rotation, Graphics g){
+	public void animate(int elapsedTime, Position position, double rotation, Graphics g){
 		if(elapsedTime < 0){
 			throw new IllegalArgumentException("Invalid elapsed time");
 		}
@@ -70,7 +69,7 @@ public class AnimateObject {
 		int currentFrame = (this.accumulatedTime / 1000 * this.fps) % this.frames.length;
 		display(position,rotation,currentFrame,g);
 	}
-	
+
 	/**
 	 * Displays a frame at the choosen position with the choosen rotation
 	 * @param position
@@ -78,7 +77,7 @@ public class AnimateObject {
 	 * @param frame
 	 * @param g
 	 */
-	public void display(CPosition position, double rotation,int frame, Graphics g){
+	public void display(Position position, double rotation,int frame, Graphics g){
 		if(position.getX() < 0 || position.getY() < 0){
 			throw new IllegalArgumentException("Bad coord");
 		}

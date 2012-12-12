@@ -4,12 +4,12 @@ import java.awt.Graphics;
 import java.awt.geom.Area;
 
 public class AbstractEntity implements Updateable, Drawable {
-	private CPosition position;
+	private Position position;
 	private int time;
 	private Area bounds;
 	private AnimateObject ao;
 	private int rotation;
-	
+
 	/**
 	 * Base constructor
 	 *
@@ -17,7 +17,7 @@ public class AbstractEntity implements Updateable, Drawable {
 	 * @param bounds the bounds of the entity
 	 * @param ao animation object
 	 */
-	protected AbstractEntity(CPosition position, Area bounds,
+	protected AbstractEntity(Position position, Area bounds,
 			AnimateObject ao) {
 		this.position = position;
 		this.bounds = bounds;
@@ -30,7 +30,7 @@ public class AbstractEntity implements Updateable, Drawable {
 	private AnimateObject getAnimateObject(){
 		return ao;
 	}
-	public void place(CPosition position){
+	public void place(Position position){
 		this.position = position;
 	}
 	public void rotate(int degree){
@@ -42,17 +42,17 @@ public class AbstractEntity implements Updateable, Drawable {
 	public Area getBounds(){
 		return this.bounds;
 	}
-	public CPosition getPosition(){
-		return new CPosition(this.position.getX(), this.position.getY());
+	public Position getPosition(){
+		return new Position(this.position.getX(), this.position.getY());
 	}
 	@Override
 	public void draw(Graphics g) {
 		// TODO Auto-generated method stub
-		
+
 	}
 	@Override
 	public void update(int elapsedTime) {
 		// TODO Auto-generated method stub
-		
+
 	}
 }

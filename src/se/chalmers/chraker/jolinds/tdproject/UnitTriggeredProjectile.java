@@ -10,9 +10,9 @@ import java.awt.geom.Area;
  */
 public class UnitTriggeredProjectile extends Projectile {
 
-	public UnitTriggeredProjectile(CPosition position, Area bounds,
-			AnimateObject ao, double speed, CPosition target,
-				Damage damage) {
+	public UnitTriggeredProjectile(Position position, Area bounds,
+			AnimateObject ao, double speed, Position target,
+			Damage damage) {
 		super(position, bounds, ao, speed, target, damage);
 		// TODO Auto-generated constructor stub
 	}
