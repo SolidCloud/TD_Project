@@ -12,6 +12,8 @@ public class Damage extends AbstractEntity {
 		this.damage = damage;
 		// TODO Auto-generated constructor stub
 	}
- 
+	public DamagePack getDamagePack(){
+		return damage;
+	}
 }
  
