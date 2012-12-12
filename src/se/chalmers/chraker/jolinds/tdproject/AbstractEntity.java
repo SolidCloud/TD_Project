@@ -8,25 +8,7 @@ public class AbstractEntity implements Updateable, Drawable {
 	private int time;
 	private Area bounds;
 	private AnimateObject ao;
-	private Direction direction = Direction.SOUTH;
-	
-	private enum Direction {
-		NORTH, EAST, SOUTH, WEST;
-		private Direction rotate() {
-			switch(this) {
-				case NORTH:
-					return EAST;
-				case EAST:
-					return SOUTH;
-				case SOUTH:
-					return WEST;
-				case WEST:
-					return NORTH;
-				default:
-					return SOUTH;
-			}
-		}
-	}
+	private int rotation;
 	
 	/**
 	 * Base constructor
@@ -40,6 +22,7 @@ public class AbstractEntity implements Updateable, Drawable {
 		this.position = position;
 		this.bounds = bounds;
 		this.ao = ao;
+		this.rotation = 0;
 	}
 	protected int getTime(){
 		return time;
@@ -50,11 +33,17 @@ public class AbstractEntity implements Updateable, Drawable {
 	public void place(CPosition position){
 		this.position = position;
 	}
-	public void rotate(){
-		this.direction = this.direction.rotate();
+	public void rotate(int degree){
+		this.rotation = (this.rotation + degree) % 360;
+	}
+	public void setRotation(int degree){
+		this.rotation = degree % 360;
 	}
 	public Area getBounds(){
 		return this.bounds;
+	}
+	public CPosition getPosition(){
+		return new CPosition(this.position.getX(), this.position.getY());
 	}
 	@Override
 	public void draw(Graphics g) {
