@@ -45,10 +45,10 @@ public class ProjectileTurret extends Turret {
 		return this.targetMode;
 	}
 
-	public ProjectileTurret(Position position, Area bounds, AnimateObject ao,
+	public ProjectileTurret(String name, Position position, AnimateObject ao,
 			ResourcePack cost, ResourcePack economy, int cooldown, 
 			Area range, Projectile projectile) {
-		super(position, bounds, ao, cost, economy, cooldown, range);
+		super(name, position, ao, cost, economy, cooldown, range);
 		this.toBeFired = projectile;
 	}
 	public Unit getTarget(List<Unit> units) {

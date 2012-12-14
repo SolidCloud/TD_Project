@@ -1,13 +1,16 @@
 package se.chalmers.chraker.jolinds.tdproject;
 
-public class Main {
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.swing.JFrame;
+
+public class Main extends JFrame {
+	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
 	}
-
 }

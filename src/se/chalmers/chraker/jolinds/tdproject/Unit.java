@@ -7,10 +7,10 @@ public class Unit extends AbstractMovingEntity implements Comparable<Unit> {
 	private int massValue;
 	private DamagePack protection;
 
-	public Unit(Position position, Area bounds, AnimateObject ao,
+	public Unit(String name, Position position, Area bounds, AnimateObject ao,
 			double speed, Position target, int structurePoints, int massValue,
 			DamagePack protection) {
-		super(position, bounds, ao, speed, target);
+		super(name, position, bounds, ao, speed, target);
 		this.structurePoints = structurePoints;
 		this.massValue = massValue;
 		this.protection = protection;

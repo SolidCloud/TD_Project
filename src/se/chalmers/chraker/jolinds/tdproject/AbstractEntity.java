@@ -6,8 +6,8 @@ import java.awt.geom.Area;
 public abstract class AbstractEntity implements Updateable, Drawable {
 	private Position position;
 	private int time;
-	private Area bounds;
 	private AnimateObject ao;
+	private String name;
 	private int rotation;
 
 	/**
@@ -17,12 +17,12 @@ public abstract class AbstractEntity implements Updateable, Drawable {
 	 * @param bounds the bounds of the entity
 	 * @param ao animation object
 	 */
-	protected AbstractEntity(Position position, Area bounds,
+	protected AbstractEntity(String name, Position position,
 			AnimateObject ao) {
 		this.position = position;
-		this.bounds = bounds;
 		this.ao = ao;
 		this.rotation = 0;
+		this.name = name;
 	}
 	protected int getTime(){
 		return time;
@@ -38,9 +38,6 @@ public abstract class AbstractEntity implements Updateable, Drawable {
 	}
 	public void setRotation(int degree){
 		this.rotation = degree % 360;
-	}
-	public Area getBounds(){
-		return this.bounds;
 	}
 	public Position getPosition(){
 		return new Position(this.position.getX(), this.position.getY());

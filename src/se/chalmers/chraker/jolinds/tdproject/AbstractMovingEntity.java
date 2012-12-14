@@ -14,6 +14,7 @@ public abstract class AbstractMovingEntity extends AbstractEntity {
 	private Area[] targetAreas;
 	private Position target;
 	private boolean atTarget;
+	private Area bounds;
 
 	/**
 	 * Base constructor
@@ -24,11 +25,12 @@ public abstract class AbstractMovingEntity extends AbstractEntity {
 	 * @param speed the speed of the entity
 	 * @param target the position where the entity will be moving towards
 	 */
-	protected AbstractMovingEntity(Position position, Area bounds, 
+	protected AbstractMovingEntity(String name, Position position, Area bounds, 
 			AnimateObject ao, double speed, Position target) {
-		super(position, bounds, ao);
+		super(name, position, ao);
 		this.speed = speed;
 		this.target = target;
+		this.bounds = bounds;
 	}
 	/**
 	 * Moves the entity and checks collision
@@ -52,4 +54,7 @@ public abstract class AbstractMovingEntity extends AbstractEntity {
 
 	}
 
+	public Area getBounds(){
+		return this.bounds;
+	}
 } 

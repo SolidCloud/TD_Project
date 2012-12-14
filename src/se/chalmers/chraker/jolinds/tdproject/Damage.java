@@ -5,11 +5,13 @@ import java.awt.geom.Area;
 public class Damage extends AbstractEntity {
 
 	private DamagePack damage;
-
-	public Damage(Position position, Area bounds, AnimateObject ao, 
+	private Area aoe;
+	public Damage(String name, Position position, Area aoe, AnimateObject ao, 
 			DamagePack damage) {
-		super(position, bounds, ao);
+		super(name, position, ao);
 		this.damage = damage;
+		this.aoe = aoe;
+		
 		// TODO Auto-generated constructor stub
 	}
 	public DamagePack getDamagePack(){

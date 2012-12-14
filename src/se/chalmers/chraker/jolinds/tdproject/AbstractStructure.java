@@ -15,9 +15,9 @@ public abstract class AbstractStructure extends AbstractEntity {
 	 * @param ao animation object
 	 * @param cost the cost to build the structure
 	 */
-	protected AbstractStructure(Position position, Area bounds, 
+	protected AbstractStructure(String name, Position position, 
 			AnimateObject ao, ResourcePack cost) {
-		super(position, bounds, ao);
+		super(name,position, ao);
 		this.cost = cost;
 	}
 

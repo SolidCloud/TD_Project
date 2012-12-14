@@ -22,9 +22,9 @@ public class Turret extends EconomyStructure {
 	 * @param economy 
 	 * TODO what is economy???
 	 */
-	public Turret(Position position, Area bounds, AnimateObject ao,
+	public Turret(String name, Position position, AnimateObject ao,
 			ResourcePack cost, ResourcePack economy, int cooldown, Area range) {
-		super(position, bounds, ao, cost, economy);
+		super(name, position, ao, cost, economy);
 
 		this.cooldown = cooldown;
 		this.cooldownRemaining = cooldown;

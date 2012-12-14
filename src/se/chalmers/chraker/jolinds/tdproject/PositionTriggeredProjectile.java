@@ -10,10 +10,10 @@ import java.awt.geom.Area;
  */
 public class PositionTriggeredProjectile extends Projectile {
 
-	public PositionTriggeredProjectile(Position position, Area bounds,
+	public PositionTriggeredProjectile(String name, Position position, Area bounds,
 			AnimateObject ao, double speed, Position target,
 			Damage damage) {
-		super(position, bounds, ao, speed, target, damage);
+		super(name, position, bounds, ao, speed, target, damage);
 
 	}
 }
