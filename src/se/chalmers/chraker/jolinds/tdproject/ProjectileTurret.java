@@ -9,6 +9,11 @@ public class ProjectileTurret extends Turret {
 
 	public enum TargetMode {
 		FIRST, LAST, WEAK, STRONG, CLOSE, FAR, MAXIMUM_DAMAGE;
+		/**
+		 * Toggles the targetmode between the opposites.
+		 * If no opposite exists to a TM, it will return that TM.
+		 * @return opposite TargetMode
+		 */
 		public TargetMode toggle() {
 			switch(this) {
 			case CLOSE:
@@ -24,7 +29,7 @@ public class ProjectileTurret extends Turret {
 			case WEAK:
 				return STRONG;
 			default:
-				return FIRST;
+				return this;
 			}
 		}
 	}
@@ -50,6 +55,7 @@ public class ProjectileTurret extends Turret {
 		List<Unit> targets = super.getTargets(units);
 		Unit target = targets.get(0);
 		if(targets.size() > 1 ){
+			// TODO instead use different comparators
 			switch (getTargetMode()){
 			case CLOSE:
 				for(int t = 0; t < targets.size(); t++){
