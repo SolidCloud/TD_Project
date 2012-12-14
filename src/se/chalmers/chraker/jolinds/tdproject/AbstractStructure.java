@@ -2,7 +2,7 @@ package se.chalmers.chraker.jolinds.tdproject;
 
 import java.awt.geom.Area;
 
-public class AbstractStructure extends AbstractEntity {
+public abstract class AbstractStructure extends AbstractEntity {
 
 	private ResourcePack cost;
 	private int techLevel = 1;

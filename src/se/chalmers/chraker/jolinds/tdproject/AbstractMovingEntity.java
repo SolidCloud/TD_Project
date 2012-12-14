@@ -9,7 +9,7 @@ import java.awt.geom.Area;
  * @author Johan
  *
  */
-public class AbstractMovingEntity extends AbstractEntity {
+public abstract class AbstractMovingEntity extends AbstractEntity {
 	private double speed;
 	private Area[] targetAreas;
 	private Position target;

@@ -3,7 +3,7 @@ package se.chalmers.chraker.jolinds.tdproject;
 import java.awt.Graphics;
 import java.awt.geom.Area;
 
-public class AbstractEntity implements Updateable, Drawable {
+public abstract class AbstractEntity implements Updateable, Drawable {
 	private Position position;
 	private int time;
 	private Area bounds;
