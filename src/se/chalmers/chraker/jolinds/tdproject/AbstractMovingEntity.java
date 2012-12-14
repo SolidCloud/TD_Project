@@ -50,8 +50,8 @@ public abstract class AbstractMovingEntity extends AbstractEntity {
 
 	// TODO Javadoc missing!!!
 	@Override
-	public void update(int elapsedTime){
-
+	public boolean update(int elapsedTime){
+		return super.update(elapsedTime);
 	}
 
 	public Area getBounds(){

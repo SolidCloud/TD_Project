@@ -48,8 +48,7 @@ public abstract class AbstractEntity implements Updateable, Drawable {
 
 	}
 	@Override
-	public void update(int elapsedTime) {
-		// TODO Auto-generated method stub
-
+	public boolean update(int elapsedTime) {
+		return true;
 	}
 }

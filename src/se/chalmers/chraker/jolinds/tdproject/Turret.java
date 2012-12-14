@@ -50,7 +50,8 @@ public class Turret extends EconomyStructure {
 		this.cooldownRemaining = cooldown;
 	}
 	@Override
-	public void update(int elapsedTime){
+	public boolean update(int elapsedTime){
 		cooldownRemaining = GameUtils.modSub(cooldownRemaining, elapsedTime);
+		return false;
 	}
 }
