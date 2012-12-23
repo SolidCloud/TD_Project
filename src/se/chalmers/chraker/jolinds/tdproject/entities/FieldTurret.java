@@ -2,7 +2,6 @@ package se.chalmers.chraker.jolinds.tdproject.entities;
 
 import java.awt.geom.Area;
 
-import se.chalmers.chraker.jolinds.tdproject.Position;
 
 public class FieldTurret extends Turret {
 	private Damage toBeFired;

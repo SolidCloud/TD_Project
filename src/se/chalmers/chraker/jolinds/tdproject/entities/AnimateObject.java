@@ -9,7 +9,6 @@ import java.awt.image.BufferedImage;
 
 import javax.swing.ImageIcon;
 
-import se.chalmers.chraker.jolinds.tdproject.Position;
 
 /**
  * Support class for animating objects

@@ -6,8 +6,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import se.chalmers.chraker.jolinds.tdproject.GameUtils;
-import se.chalmers.chraker.jolinds.tdproject.Position;
 
 public class Turret extends EconomyStructure {
 

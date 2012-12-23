@@ -4,7 +4,7 @@ import java.util.List;
 
 
 import se.chalmers.chraker.jolinds.tdproject.entities.DamagePack;
-import se.chalmers.chraker.jolinds.tdproject.GameUtils;
+import se.chalmers.chraker.jolinds.tdproject.entities.GameUtils;
 import se.chalmers.chraker.jolinds.tdproject.entities.Unit;
 
 public class TargetMaximumDamage implements ITargetMode{
