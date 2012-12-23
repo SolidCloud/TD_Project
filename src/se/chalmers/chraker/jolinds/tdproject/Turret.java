@@ -35,9 +35,9 @@ public class Turret extends EconomyStructure {
 	}
 
 
-	protected List<Unit> getTargets(List<Unit> units) {
+	protected List<Unit> getTargets() {
 		List<Unit> targets = new ArrayList<Unit>();
-		for (Unit unit : units){
+		for (Unit unit : Unit.units){
 			Area checkIntersect = getRange();
 			checkIntersect.intersect(unit.getBounds());
 			if (!checkIntersect.isEmpty()){

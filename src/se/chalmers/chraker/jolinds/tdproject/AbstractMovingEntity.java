@@ -47,6 +47,14 @@ public abstract class AbstractMovingEntity extends AbstractEntity {
 	public boolean atTarget(){
 		return atTarget;
 	}
+	
+	public void setTarget(Position target){
+		this.target=target;
+	}
+	
+	public Position getTarget(){
+		return this.target;
+	}
 
 	// TODO Javadoc missing!!!
 	@Override

@@ -1,11 +1,17 @@
 package se.chalmers.chraker.jolinds.tdproject;
 
 import java.awt.geom.Area;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils.Collections;
 
 public class Unit extends AbstractMovingEntity implements Comparable<Unit> {
+	static List<Unit> units= new ArrayList<Unit>();
 	private int structurePoints;
 	private int massValue;
 	private DamagePack protection;
+	private double distanceLeft;
 
 	public Unit(String name, Position position, Area bounds, AnimateObject ao,
 			double speed, Position target, int structurePoints, int massValue,
@@ -14,6 +20,8 @@ public class Unit extends AbstractMovingEntity implements Comparable<Unit> {
 		this.structurePoints = structurePoints;
 		this.massValue = massValue;
 		this.protection = protection;
+		units.add(this);
+		java.util.Collections.sort(Unit.units);
 	}
 
 	public DamagePack getProtection() {
@@ -28,8 +36,9 @@ public class Unit extends AbstractMovingEntity implements Comparable<Unit> {
 	public void takeDamage(DamagePack damagePack) {
 
 	}
-	public void update() {
-
+	public boolean update() {
+		return false;
+		
 	}
 	// TODO compare Units' position to other position
 
@@ -41,7 +50,7 @@ public class Unit extends AbstractMovingEntity implements Comparable<Unit> {
 	 */
 	@Override
 	public int compareTo(Unit u) {
-		return 0;
+		return (int)(this.distanceLeft - u.distanceLeft);
 	}
 
 }
