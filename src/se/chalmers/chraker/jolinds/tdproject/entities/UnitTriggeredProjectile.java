@@ -1,6 +1,8 @@
-package se.chalmers.chraker.jolinds.tdproject;
+package se.chalmers.chraker.jolinds.tdproject.entities;
 
 import java.awt.geom.Area;
+
+import se.chalmers.chraker.jolinds.tdproject.Position;
 
 /**
  * Class for a projectile that is triggered by collision with a unit.

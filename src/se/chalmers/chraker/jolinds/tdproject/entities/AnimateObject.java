@@ -1,4 +1,4 @@
-package se.chalmers.chraker.jolinds.tdproject;
+package se.chalmers.chraker.jolinds.tdproject.entities;
 
 import java.awt.Dimension;
 import java.awt.Graphics;
@@ -8,6 +8,8 @@ import java.awt.image.AffineTransformOp;
 import java.awt.image.BufferedImage;
 
 import javax.swing.ImageIcon;
+
+import se.chalmers.chraker.jolinds.tdproject.Position;
 
 /**
  * Support class for animating objects

@@ -1,7 +1,10 @@
-package se.chalmers.chraker.jolinds.tdproject;
+package se.chalmers.chraker.jolinds.tdproject.entities;
 
 import java.awt.Graphics;
 import java.awt.geom.Area;
+
+import se.chalmers.chraker.jolinds.tdproject.Position;
+import se.chalmers.chraker.jolinds.tdproject.Updateable;
 
 public abstract class AbstractEntity implements Updateable, Drawable {
 	private Position position;

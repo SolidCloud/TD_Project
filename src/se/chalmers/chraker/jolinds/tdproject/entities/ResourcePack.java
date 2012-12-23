@@ -1,4 +1,4 @@
-package se.chalmers.chraker.jolinds.tdproject;
+package se.chalmers.chraker.jolinds.tdproject.entities;
 
 /** 
  * Immutable class for representing different kinds of resources.

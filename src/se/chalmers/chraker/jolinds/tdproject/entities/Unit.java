@@ -1,8 +1,10 @@
-package se.chalmers.chraker.jolinds.tdproject;
+package se.chalmers.chraker.jolinds.tdproject.entities;
 
 import java.awt.geom.Area;
 import java.util.ArrayList;
 import java.util.List;
+
+import se.chalmers.chraker.jolinds.tdproject.Position;
 
 import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils.Collections;
 

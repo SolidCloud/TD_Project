@@ -2,11 +2,10 @@ package se.chalmers.chraker.jolinds.tdproject.targetmodes;
 
 import java.util.List;
 
-import javax.naming.OperationNotSupportedException;
 
-import se.chalmers.chraker.jolinds.tdproject.DamagePack;
+import se.chalmers.chraker.jolinds.tdproject.entities.DamagePack;
 import se.chalmers.chraker.jolinds.tdproject.GameUtils;
-import se.chalmers.chraker.jolinds.tdproject.Unit;
+import se.chalmers.chraker.jolinds.tdproject.entities.Unit;
 
 public class TargetMaximumDamage implements ITargetMode{
 

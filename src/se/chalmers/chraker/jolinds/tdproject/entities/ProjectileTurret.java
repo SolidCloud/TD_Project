@@ -1,4 +1,5 @@
-package se.chalmers.chraker.jolinds.tdproject;
+package se.chalmers.chraker.jolinds.tdproject.entities;
+import se.chalmers.chraker.jolinds.tdproject.Position;
 import se.chalmers.chraker.jolinds.tdproject.targetmodes.*;
 
 import java.awt.Graphics;

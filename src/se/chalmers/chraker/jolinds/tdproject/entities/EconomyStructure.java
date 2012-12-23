@@ -1,6 +1,8 @@
-package se.chalmers.chraker.jolinds.tdproject;
+package se.chalmers.chraker.jolinds.tdproject.entities;
 
 import java.awt.geom.Area;
+
+import se.chalmers.chraker.jolinds.tdproject.Position;
 
 public class EconomyStructure extends AbstractStructure {
 	private ResourcePack economy;
