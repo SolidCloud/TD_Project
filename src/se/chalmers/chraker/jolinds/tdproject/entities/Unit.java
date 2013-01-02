@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils.Collections;
+import java.util.Collections;
 
 public class Unit extends AbstractMovingEntity implements Comparable<Unit> {
 	static List<Unit> units= new ArrayList<Unit>();
@@ -22,7 +22,7 @@ public class Unit extends AbstractMovingEntity implements Comparable<Unit> {
 		this.massValue = massValue;
 		this.protection = protection;
 		units.add(this);
-		java.util.Collections.sort(Unit.units);
+		Collections.sort(Unit.units);
 	}
 
 	public DamagePack getProtection() {
